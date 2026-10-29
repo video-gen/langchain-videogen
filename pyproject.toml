@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "langchain-videogen"
+version = "2.5.0"
+description = "Official LangChain tools for the VideoGen API. Generate videos, images, voiceovers, sound effects, music, and avatars from any LangChain or LangGraph agent."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+keywords = [
+    "videogen",
+    "langchain",
+    "langgraph",
+    "ai",
+    "agents",
+    "tools",
+    "text-to-video",
+    "ai-video-generation",
+    "text-to-speech",
+    "image-generation",
+]
+
+dependencies = [
+    "videogen>=2.5.0",
+    "langchain-core>=0.3.0",
+    "pydantic>=2.0.0",
+]
+
+[project.urls]
+Homepage = "https://videogen.io"
+Documentation = "https://github.com/video-gen/langchain-videogen#readme"
+Repository = "https://github.com/video-gen/langchain-videogen"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/langchain_videogen"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: live tests that call the VideoGen API (require VIDEOGEN_API_KEY)",
+]
+testpaths = ["tests"]
