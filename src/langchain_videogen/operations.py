@@ -53,7 +53,7 @@ def run_workflow(
     if not controls.wait:
         return to_dict(started)
 
-    run = poll_workflow_run(client, started["workflowRunId"], **_poll_kwargs(controls))
+    run = poll_workflow_run(client, started["workflow_run_id"], **_poll_kwargs(controls))
     return to_dict(run)
 
 
@@ -67,7 +67,7 @@ def run_tool(
     if not controls.wait:
         return to_dict(started)
 
-    execution = poll_executed_tool(client, started["toolExecutionId"], **_poll_kwargs(controls))
+    execution = poll_executed_tool(client, started["tool_execution_id"], **_poll_kwargs(controls))
     return to_dict(execution)
 
 
@@ -83,6 +83,6 @@ def run_export(
         return to_dict(started)
 
     project_export = poll_project_export(
-        client, project_id, started["exportId"], **_poll_kwargs(controls)
+        client, project_id, started["export_id"], **_poll_kwargs(controls)
     )
     return to_dict(project_export)

@@ -98,3 +98,7 @@ Generation uses your VideoGen account credits. Obtain user approval before invok
 For a credential-free smoke check, build the tools with a synthetic key without invoking them. The package tests mock or avoid external calls; they do not prove paid generation.
 
 [VideoGen](https://videogen.io/) · [MCP setup](https://videogen.io/videogen-mcp)
+
+## 2.5.4
+
+Fix polling after workflow, media-tool and export starts to use the Python SDK’s normalized response keys. No API capabilities or dependency requirements changed.

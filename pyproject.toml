@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "langchain-videogen"
-version = "2.5.0"
+version = "2.5.4"
 description = "Official LangChain tools for the VideoGen API. Generate videos, images, voiceovers, sound effects, music, and avatars from any LangChain or LangGraph agent."
 readme = "README.md"
 license = { text = "MIT" }
